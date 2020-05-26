@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Login from "./components/Login";
+import Dashboard from './components/Dashboard';
+import { UserProvider } from './contextAPI/UserContext';
+import ProductDetail from './components/ProductDetail';
+import Cart from './components/Cart';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+  const user = { name: null, loggedIn: false }
+
+  return (<Router>
+    <UserProvider value={user}>
+      <div className="App">
+        <div className="auth-wrapper">
+          <div className="auth-inner">
+            <Switch>
+              <Route exact path='/' component={Dashboard} />
+              <Route path="/login" component={Login} />
+              <Route path="/view/:id" component={ProductDetail} />
+              <Route path="/cart" component={Cart} />
+              <Route path="/" component={Dashboard} />
+            </Switch>
+          </div>
+        </div>
+      </div>
+    </UserProvider>
+  </Router>
   );
 }
 

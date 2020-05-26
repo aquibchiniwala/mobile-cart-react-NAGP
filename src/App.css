@@ -1,38 +1,330 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+nav {
+    background-color: lightskyblue;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul {
+    margin: 0;
+    padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul li {
+    /* This allow us to arrange list items in a row, without using float */
+    display: inline-block;
+    list-style-type: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Create a style for the first level items */
+nav>ul>li>a {
+    color: #aaa;
+    background-color: #FF0;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+    font-family: 'Montserrat', sans-serif;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Category Ads */
+
+#ads {
+    margin: 30px 0 30px 0;
+
+}
+
+#ads .card-notify-badge {
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    background: #f2d900;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color: #000;
+    padding: 5px 10px;
+    font-size: 14px;
+
+}
+
+#ads .card-notify-year {
+    position: absolute;
+    right: -10px;
+    top: -20px;
+    background: #ff4444;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    width: 50px;
+    height: 50px;
+    padding: 15px 0 0 0;
+}
+
+
+#ads .card-detail-badge {
+    background: #0de405;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color: black;
+    padding: 5px 10px;
+    font-size: 20px;
+
+}
+
+
+
+#ads .card:hover {
+    background: #fff;
+    box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#ads .card-image-overlay {
+    font-size: 20px;
+
+}
+
+
+#ads .card-image-overlay span {
+    display: inline-block;
+}
+
+
+#ads .ad-btn {
+    text-transform: uppercase;
+    width: 150px;
+    height: 40px;
+    border-radius: 80px;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: center;
+    border: 3px solid #005cbf;
+    display: block;
+    text-decoration: none;
+    margin: 20px auto 1px auto;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    background-color: #0062cc;
+}
+
+#ads .ad-btn:hover {
+    background-color: #0069d9;
+    color: #1e1717;
+    border: 2px solid #0062cc;
+    background: transparent;
+    transition: all 0.3s ease;
+    box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+    color: black;
+}
+
+#ads .ad-title h5 {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.disableDiv {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.myButton {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    border-radius: 100%;
+    height: auto;
+    width: 25%;
+}
+
+.ticker {
+    text-transform: uppercase;
+    width: 150px;
+    height: 40px;
+    /* border-radius: 80px; */
+    font-size: 16px;
+    line-height: 35px;
+    text-align: center;
+    /* border: 3px solid  #005cbf; */
+    display: block;
+    text-decoration: none;
+    margin: 20px auto 1px auto;
+    /* color: white; */
+    /* overflow: hidden;         */
+    position: relative;
+    /* background-color: #0062cc; */
+}
+
+.incButton {
+    background-color: #4CAF50;
+}
+
+.decButton {
+    background-color: rgb(209, 53, 53);
+}
+
+.qtyBox {
+    border-radius: 20%;
+    width: 50px;
+    border: 1px solid #000000;
+    font-size: 16px;
+    margin: 4px 2px;
+    font-weight: bold;
+    text-align: center;
+    height: auto;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.loginContainer {
+    border: #0074D9 1px solid;
+    width: 50%;
+    height: 80%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 100px
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.gallery-wrap .img-big-wrap img {
+    height: auto;
+    width: auto;
+    display: inline-block;
+    cursor: zoom-in;
+    padding: 30%;
+}
+
+
+.gallery-wrap .img-small-wrap .item-gallery {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ddd;
+    margin: 7px 2px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.gallery-wrap .img-small-wrap {
+    text-align: center;
+}
+
+.gallery-wrap .img-small-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: zoom-in;
+}
+
+.error-main {
+    background-color: #fff;
+    box-shadow: 0px 10px 10px -10px #5D6572;
+}
+
+.error-main h1 {
+    font-weight: bold;
+    color: #444444;
+    font-size: 100px;
+    text-shadow: 2px 4px 5px #6E6E6E;
+}
+
+.error-main h6 {
+    color: #42494F;
+}
+
+.error-main p {
+    color: #9897A0;
+    font-size: 14px;
+}
+
+.modal {
+    font-size: 12px;
+}
+
+.modal>.header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+
+.modal>.content {
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.modal>.actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.modal>.close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
 }

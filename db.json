@@ -1,0 +1,54 @@
+{
+    "mobiles": [
+      {
+        "id": 1,
+        "device_name": "Apple Iphone 11 Pro",
+        "price": 100000,
+        "colours": "black,gold,silver",
+        "screen_size": "8 inch",
+        "os": "IOS",
+        "ram": "4 GB",
+        "storage": "128 GB"
+      },
+      {
+        "id": 2,
+        "device_name": "Samsung Galaxy S20",
+        "price": 80000,
+        "colours": "black,gold,silver",
+        "screen_size": "9 inch",
+        "os": "Android",
+        "ram": "8 GB",
+        "storage": "256 GB"
+      },
+      {
+        "id": 3,
+        "device_name": "One Plus 8",
+        "price": 70000,
+        "colours": "black,gold,silver",
+        "screen_size": "8 inch",
+        "os": "Android",
+        "ram": "12 GB",
+        "storage": "512 GB"
+      },
+      {
+        "id": 4,
+        "device_name": "Samsung Note 10",
+        "price": 73000,
+        "colours": "black,gold,silver",
+        "screen_size": "10 inch",
+        "os": "Android",
+        "ram": "12 GB",
+        "storage": "512 GB"
+      },
+      {
+        "id": 5,
+        "device_name": "Mi 10",
+        "price": 30000,
+        "colours": "black,gold,silver",
+        "screen_size": "7.5 inch",
+        "os": "Android",
+        "ram": "6 GB",
+        "storage": "256 GB"
+      }
+    ]
+  }
